@@ -1,0 +1,16 @@
+schema_version: 1
+name: e2e-partner
+description: Sample partner catalog used to exercise multi-catalog e2e scenarios.
+packages:
+  hello-upstream:
+    kind: service
+    summary: Demo MCP service with no storage.
+    source: https://github.com/keystone-codes/hello-upstream-package
+    versions:
+      - {version: 1.0.0, ref: v1.0.0, keystone_mcp: ">=0.5.0,<2.0"}
+  file-mcp:
+    kind: service
+    summary: Upload and download links for large files on S3-compatible storage.
+    source: https://github.com/keystone-codes/file-mcp
+    versions:
+      - {version: 1.0.0, ref: v1.0.0, keystone_mcp: ">=0.5.0,<2.0"}
